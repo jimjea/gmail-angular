@@ -1,7 +1,7 @@
 {
-  "name": "Listify",
+  "name": "Gmail-Angular",
   "version": "0.0.0",
-  "description": "Lists of Popular Items",
+  "description": "Gmail in Angular",
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^0.8.0",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/listify/listify"
+    "url": "https://github.com/jimjea/gmail-angular"
   },
   "authors": [
     "Jimmy Jea"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/listify/listify/issues"
+    "url": "https://github.com/jimjea/gmail-angular/issues"
   },
-  "homepage": "https://github.com/listify/listify"
+  "homepage": "https://github.com/jimjea/gmail-angular"
 }

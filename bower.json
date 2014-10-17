@@ -9,6 +9,14 @@
   "moduleType": [
     "node"
   ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
   "license": "MIT",
   "dependencies": {
     "angular-ui-router": "~0.2.11",
