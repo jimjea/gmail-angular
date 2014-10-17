@@ -11,7 +11,6 @@ angular.module('gmail-angular.inbox', ['ui.router'])
 
 .controller('InboxController', function($scope, $state) {
   $scope.toInbox = function() {
-    console.log('got here');
-    // $state.go('inbox');
+    $state.go('inbox');
   }
 })
