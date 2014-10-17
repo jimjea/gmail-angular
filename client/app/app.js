@@ -3,5 +3,5 @@ angular.module('gmail-angular', [
 ])
 
 .config(function($urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/inbox');
 })

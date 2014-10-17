@@ -1,0 +1,16 @@
+.messages {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+.inboxButton, .outboxButton, .trashButton {
+  position: relative;
+  text-align: center;
+  border: 1px solid black;
+  padding-top: 8px;
+  top: 5%;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}

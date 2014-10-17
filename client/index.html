@@ -7,7 +7,11 @@
 <body ng-app="gmail-angular">
   <h2>JimMail-Angular</h2>
 
-  <div ui-view></div>
+  <div class="inboxButton">Inbox</div>
+  <div class="outboxButton">Outbox</div>
+  <div class="trashButton">Trash</div>
+
+  <div class="messages" ui-view></div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
