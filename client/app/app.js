@@ -1,3 +1,7 @@
-angular.module('gmail-angular', [])
+angular.module('gmail-angular', [
+  'gmail-angular.inbox'
+])
 
-.config()
+.config(function($urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
+})
