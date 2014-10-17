@@ -1,0 +1,16 @@
+{
+  "name": "gmail-angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jimjea/gmail-angular",
+  "authors": [
+    "Jimmy Jea"
+  ],
+  "main": "index.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-ui-router": "~0.2.11"
+  }
+}
