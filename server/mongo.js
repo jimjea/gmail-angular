@@ -1,4 +1,3 @@
-var express = require('express');
 var mongoose = require('mongoose');
 var mongodb = 'mongodb://gmail-angular:test123@ds047040.mongolab.com:47040/gmail-angular';
 
@@ -49,11 +48,5 @@ var User = mongoose.model('User', userSchema);
 var Email = mongoose.model('Email', emailSchema);
 
 
-
-var app = express();
-
-require('./config/middleware.js')(app, express);
-
-exports.app = app;
 exports.user = User;
 exports.email = Email;
