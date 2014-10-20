@@ -7,12 +7,24 @@ angular.module('gmail-angular.authServices', [])
       url: 'api/user/signup',
       data: userData
     })
-    .success(function(res) {
-      console.log('hi')
+    .then(function(res) {
+      return res.data
+    })
+  };
+
+  var signin = function(userData) {
+    return $http({
+      method: 'POST',
+      url: 'api/user/signin',
+      data: userData
+    })
+    .then(function(res) {
+      return res.data
     })
   };
 
   return {
-    signup: signup
+    signup: signup,
+    signin: signin
   };
 })

@@ -7,5 +7,5 @@ angular.module('gmail-angular', [
 ])
 
 .config(function($urlRouterProvider) {
-  $urlRouterProvider.otherwise('/inbox');
+  $urlRouterProvider.otherwise('/signin');
 })

@@ -9,7 +9,7 @@ module.exports = {
     User.findOne({username: username})
       .exec(function(err, found) {
         if (found) {
-          res.status(500).send('User already exists');
+          res.status(404).send('User already exists');
         } else {
           var newUser = new User({
             username: username,
@@ -21,16 +21,16 @@ module.exports = {
       })
   },
 
-  login: function(req, res) {
+  signin: function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
 
     User.findOne({username: username})
       .exec(function(err, found) {
         if (!found) {
-          res.send('Username not found');
+          res.status(404).send('Username not found');
         } else {
-          console.log(found);
+          res.send('Login successful');
         }
       })
   }

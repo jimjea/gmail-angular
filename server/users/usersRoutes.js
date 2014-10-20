@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.route('/signup')
     .post(usersController.signup);
 
-  app.route('/login')
-    .post(usersController.login);
+  app.route('/signin')
+    .post(usersController.signin);
 
 }
