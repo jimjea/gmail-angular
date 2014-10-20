@@ -1,1 +1,3 @@
-outboxRoutes.js
+module.exports = function(app) {
+
+}

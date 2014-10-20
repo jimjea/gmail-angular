@@ -1,1 +1,3 @@
-trashRoutes.js
+module.exports = function(app) {
+
+}

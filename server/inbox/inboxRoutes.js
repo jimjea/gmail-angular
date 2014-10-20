@@ -1,1 +1,3 @@
-inboxRoutes.js
+module.exports = function(app) {
+
+}
