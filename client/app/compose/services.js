@@ -1,6 +1,6 @@
 angular.module('gmail-angular.composeServices', [])
 
-.factory('Compose', function($http, $state, $window) {
+.factory('Compose', function($http) {
 
   var composedMail = function(email) {
     return $http({

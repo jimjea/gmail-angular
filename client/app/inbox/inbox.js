@@ -9,8 +9,17 @@ angular.module('gmail-angular.inbox', ['ui.router'])
     })
 })
 
-.controller('InboxController', function($scope, $state) {
+.controller('InboxController', function($scope, $state, $window, Inbox) {
+  var username = $window.localStorage.getItem('username') + '@jimmail.com';
+  $scope.data = {username: username};
   $scope.toInbox = function() {
     $state.go('inbox');
-  }
+  };
+  $scope.fetch = function() {
+    Inbox.fetchInbox($scope.data)
+      .success(function(data) {
+        console.log(data)
+      })
+  };
+  $scope.fetch();
 })
