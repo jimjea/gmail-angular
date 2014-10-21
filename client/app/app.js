@@ -5,6 +5,7 @@ angular.module('gmail-angular', [
   'gmail-angular.auth',
   'gmail-angular.authServices',
   'gmail-angular.compose',
+  'gmail-angular.composeServices',
 ])
 
 .config(function($urlRouterProvider) {

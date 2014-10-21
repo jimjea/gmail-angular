@@ -9,7 +9,7 @@ angular.module('gmail-angular.compose', ['ui.router'])
     })
 })
 
-.controller('ComposeController', function($scope, $state, $window) {
+.controller('ComposeController', function($scope, $state, $window, Compose) {
   var username = $window.localStorage.getItem('username') + '@jimmail.com';
   var subject = "(no subject)";
   $scope.emailData = {
@@ -19,7 +19,10 @@ angular.module('gmail-angular.compose', ['ui.router'])
   $scope.newEmail = function() {
     $state.go('compose');
   };
-  $scope.test = function() {
-    console.log($scope.emailData)
+  $scope.sendMail = function() {
+    Compose.composedMail($scope.emailData)
+      .success(function() {
+        $state.go('inbox');
+      })
   }
 })
