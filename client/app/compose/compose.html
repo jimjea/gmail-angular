@@ -1,0 +1,13 @@
+<div class="emailBody">
+  <form ng-submit="test()">
+    <h2 class="emailHead">New Message</h2>
+    <label class="to">To: </label><input type="email" ng-model="emailData.receiver"><br>
+    From: &nbsp&nbsp&nbsp{{emailData.username}}<br><br>
+
+    <input class="subject" type="text" placeholder="Subject" ng-model="emailData.subject"> <br><br>
+
+    <textarea class="body" ng-model="emailData.body"></textarea> <br><br>
+
+    <input type="submit" value="Send">
+  </form>
+</div>

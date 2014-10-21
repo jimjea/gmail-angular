@@ -2,7 +2,7 @@ var User = require('../mongo.js').user;
 
 module.exports = {
   signup: function(req, res) {
-    var username = req.body.username;
+    var username = req.body.username + '@jimmail.com';
     var password = req.body.password;
 
 // should return proper error so angular knows when it has passed or failed
@@ -23,7 +23,7 @@ module.exports = {
   },
 
   signin: function(req, res) {
-    var username = req.body.username;
+    var username = req.body.username + '@jimmail.com';
     var password = req.body.password;
 
     User.findOne({username: username})

@@ -4,6 +4,7 @@ angular.module('gmail-angular', [
   'gmail-angular.trash',
   'gmail-angular.auth',
   'gmail-angular.authServices',
+  'gmail-angular.compose',
 ])
 
 .config(function($urlRouterProvider) {

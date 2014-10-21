@@ -12,6 +12,10 @@ label{
   text-align: left;
 }
 
+.to {
+  width: 55px;
+}
+
 .allButtons {
   position: absolute;
   top: 14%;
@@ -40,4 +44,25 @@ label{
 
 a {
   text-decoration: none;
+}
+
+.emailBody {
+  position: fixed;
+  border: 1px solid black;
+  width: 400px;
+  height: 450px;
+  left: 32%;
+  padding-left: 20px;
+  padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.subject {
+  width: 100%;
+}
+
+.body {
+  width: 100%;
+  height: 55%;
 }
