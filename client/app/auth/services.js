@@ -7,8 +7,12 @@ angular.module('gmail-angular.authServices', [])
       url: 'api/user/signup',
       data: userData
     })
-    .then(function(res) {
-      return res.data
+    .success(function(data, status) {
+      // store username in local storage
+      return status
+    })
+    .error(function(data, status) {
+      return status
     })
   };
 
@@ -18,8 +22,12 @@ angular.module('gmail-angular.authServices', [])
       url: 'api/user/signin',
       data: userData
     })
-    .then(function(res) {
-      return res.data
+    .success(function(data, status) {
+      // store username in local storage
+      return status
+    })
+    .error(function(data, status) {
+      return status
     })
   };
 

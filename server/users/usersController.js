@@ -5,11 +5,11 @@ module.exports = {
     var username = req.body.username;
     var password = req.body.password;
 
-
+// should return proper error so angular knows when it has passed or failed
     User.findOne({username: username})
       .exec(function(err, found) {
         if (found) {
-          res.status(404).send('User already exists');
+          res.status(500).send('User already exists');
         } else {
           var newUser = new User({
             username: username,
@@ -28,7 +28,7 @@ module.exports = {
     User.findOne({username: username})
       .exec(function(err, found) {
         if (!found) {
-          res.status(404).send('Username not found');
+          res.status(404).end();
         } else {
           res.send('Login successful');
         }

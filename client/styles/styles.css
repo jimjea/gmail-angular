@@ -4,6 +4,15 @@
   left: 50%;
 }
 
+label{
+    display: inline-block;
+    /*float: left;*/
+    /*clear: left;*/
+    width: 75px;
+    text-align: left;
+}
+
+
 .inboxButton, .outboxButton, .trashButton {
   position: relative;
   text-align: center;

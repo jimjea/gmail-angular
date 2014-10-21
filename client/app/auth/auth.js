@@ -18,18 +18,13 @@ angular.module('gmail-angular.auth', ['ui.router'])
 .controller('AuthController', function($scope, $state, Auth) {
   $scope.userinfo = {};
   $scope.signup = function() {
-    Auth.signup($scope.userinfo)
-      .then(
-        $state.go('inbox')
-      )
-      .catch(function(error) {
-        console.log(error)
-      })
+    Auth.signup($scope.userinfo).success(function() {
+      $state.go('inbox');
+    })
   };
   $scope.signin = function() {
-    Auth.signin($scope.userinfo)
-      .then(
-        $state.go('inbox')
-      )
+    Auth.signin($scope.userinfo).success(function(data) {
+      $state.go('inbox');
+    });
   }
 })
