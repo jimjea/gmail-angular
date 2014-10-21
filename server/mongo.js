@@ -30,6 +30,10 @@ var emailSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  receiver: {
+    type: String,
+    required: true
+  },
   subject: {
     type: String,
     required: true

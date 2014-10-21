@@ -17,6 +17,7 @@ angular.module('gmail-angular.auth', ['ui.router'])
 
 .controller('AuthController', function($scope, $state, Auth) {
   $scope.userinfo = {};
+  $scope.loggedin = Auth.resolved;
   $scope.signup = function() {
     Auth.signup($scope.userinfo).success(function() {
       $state.go('inbox');

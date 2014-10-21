@@ -12,16 +12,28 @@ label{
     text-align: left;
 }
 
+.allButtons {
+  position: absolute;
+  top: 14%;
+}
 
-.inboxButton, .outboxButton, .trashButton {
+.inboxButton, .outboxButton, .trashButton, .composeButton {
   position: relative;
   text-align: center;
-  border: 1px solid black;
   padding-top: 8px;
   top: 5%;
   width: 100px;
   height: 30px;
   cursor: pointer;
+}
+
+.composeButton {
+  border: 1px solid black;
+
+}
+
+.inboxButton:visited {
+  font-weight: bold;
 }
 
 a {

@@ -7,9 +7,14 @@
 <body ng-app="gmail-angular">
   <h2>JimMail-Angular</h2>
 
-  <div class="inboxButton" ng-controller="InboxController" ng-click="toInbox()">Inbox</div>
-  <div class="outboxButton" ng-controller="OutboxController" ng-click="toOutbox()">Outbox</div>
-  <div class="trashButton" ng-controller="TrashController" ng-click="toTrash()">Trash</div>
+
+<!-- NEED TO TOGGLE SHOWING BUTTONS ON THE SIGN IN PAGE -->
+  <div class="allButtons" ng-controller="AuthController" ng-if="!loggedin[0]">
+    <div class="composeButton">Compose</div>
+    <div class="inboxButton" ng-controller="InboxController" ng-click="toInbox()">Inbox</div>
+    <div class="outboxButton" ng-controller="OutboxController" ng-click="toOutbox()">Outbox</div>
+    <div class="trashButton" ng-controller="TrashController" ng-click="toTrash()">Trash</div>
+  </div>
 
   <div class="messages" ui-view></div>
 
