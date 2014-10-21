@@ -1,4 +1,6 @@
 <div class="emailBody">
+  <div class="username">{{emailData.username}}</div>
+
   <form ng-submit="sendMail()">
     <h2 class="emailHead">New Message</h2>
     <label class="to">To: </label><input type="email" ng-model="emailData.receiver"><br>
