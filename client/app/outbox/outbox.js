@@ -18,7 +18,7 @@ angular.module('gmail-angular.outbox', ['ui.router'])
   $scope.getOutbox = function() {
     Outbox.fetchOutbox($scope.user)
       .success(function(data) {
-        $scope.emails = data;
+        $scope.emails = data.reverse();
       })
   };
   $scope.getOutbox();

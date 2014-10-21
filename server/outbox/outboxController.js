@@ -4,7 +4,6 @@ var Email = require('../mongo').email;
 module.exports = {
   fetchOutbox: function(req, res) {
     var username = req.body.username;
-    console.log(username)
 
     Email.find({username: username})
       .exec(function(err, found) {
