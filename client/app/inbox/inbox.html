@@ -1,3 +1,10 @@
 <div>
-  Inbox messages
+  <table>
+    <tr ng-repeat="email in emails">
+        <td class="inlineSender">{{email.username}}</td> 
+        <td class="inlineSubject">{{email.subject}}</td> 
+        <td class="inlineBody">{{email.body}}</td> 
+        <td class="inlineDate">{{email.createdAt}}</td>
+    </tr>
+  </table>
 </div>

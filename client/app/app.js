@@ -2,6 +2,7 @@ angular.module('gmail-angular', [
   'gmail-angular.inbox',
   'gmail-angular.inboxServices',
   'gmail-angular.outbox',
+  'gmail-angular.outboxServices',
   'gmail-angular.trash',
   'gmail-angular.auth',
   'gmail-angular.authServices',

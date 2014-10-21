@@ -18,7 +18,11 @@ angular.module('gmail-angular.inbox', ['ui.router'])
   $scope.fetch = function() {
     Inbox.fetchInbox($scope.data)
       .success(function(data) {
-        console.log(data)
+        if (data.length > 0) {
+          $scope.emails = data;
+        } else {
+          $scope.emails = [{username: 'Inbox Empty'}];
+        }
       })
   };
   $scope.fetch();
