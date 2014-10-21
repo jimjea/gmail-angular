@@ -1,7 +1,7 @@
 <div>
   <table>
     <tr ng-repeat="email in emails">
-        <td class="inlineSender">{{email.username}}</td> 
+        <td class="inlineSender">To: {{email.receiver}}</td> 
         <td class="inlineSubject">{{email.subject}}</td> 
         <td class="inlineBody">{{email.body}}</td> 
         <td class="inlineDate">{{email.createdAt}}</td>

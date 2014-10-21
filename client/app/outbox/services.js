@@ -3,15 +3,15 @@ angular.module('gmail-angular.outboxServices', [])
 .factory('Outbox', function($http) {
   var fetchOutbox = function(username) {
     return $http({
-      type: 'POST',
+      method: 'POST',
       url: 'api/outbox',
       data: username
     })
     .success(function(data, status) {
-      console.log('success');
+      return data;
     })
     .error(function(data, status) {
-      console.log('error');
+      return status;
     })
   };
 
@@ -19,3 +19,23 @@ angular.module('gmail-angular.outboxServices', [])
     fetchOutbox: fetchOutbox
   }
 })
+
+// ;(function() {
+//   'use strict';
+
+//   angular
+//     .module('gmail-angular')
+//     .factory('Outbox', Outbox);
+
+//   /* @inject */
+//   function Outbox($http) {
+//     return {
+//       fetchOutbox: fetchOutbox
+//     }
+
+//     function fetchOutbox(username) {
+
+//     }
+//   }
+
+// }).call(this);

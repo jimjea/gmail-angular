@@ -10,12 +10,16 @@ angular.module('gmail-angular.outbox', ['ui.router'])
 })
 
 .controller('OutboxController', function($scope, $state, $window, Outbox) {
-  $scope.user = $window.localStorage.getItem('username') + '@jimmail.com';
+  var username = $window.localStorage.getItem('username') + '@jimmail.com';
+  $scope.user = {username: username};
   $scope.toOutbox = function() {
     $state.go('outbox');
   };
   $scope.getOutbox = function() {
-    Outbox.fetchOutbox($scope.user);
+    Outbox.fetchOutbox($scope.user)
+      .success(function(data) {
+        $scope.emails = data;
+      })
   };
   $scope.getOutbox();
 })
