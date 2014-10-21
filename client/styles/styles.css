@@ -5,11 +5,11 @@
 }
 
 label{
-    display: inline-block;
-    /*float: left;*/
-    /*clear: left;*/
-    width: 75px;
-    text-align: left;
+  display: inline-block;
+  /*float: left;*/
+  /*clear: left;*/
+  width: 75px;
+  text-align: left;
 }
 
 .allButtons {
@@ -23,7 +23,7 @@ label{
   padding-top: 8px;
   top: 5%;
   width: 100px;
-  height: 30px;
+  height: 27px;
   cursor: pointer;
 }
 
@@ -36,7 +36,6 @@ label{
   left: 85%;
   top: 2%;
   border: 1px solid black;
-
 }
 
 a {

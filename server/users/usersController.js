@@ -17,6 +17,7 @@ module.exports = {
           })
           newUser.save();
           console.log('User saved');
+          res.send('Successful Signup');
         }
       })
   },
