@@ -10,6 +10,8 @@
 
 <!-- NEED TO TOGGLE SHOWING BUTTONS ON THE SIGN IN PAGE -->
   <div class="allButtons" ng-controller="AuthController" ng-if="!loggedin[0]">
+    {{userinfo.username}}
+    <div class="signoutButton" ng-click="signout()">Sign Out</div>
     <div class="composeButton">Compose</div>
     <div class="inboxButton" ng-controller="InboxController" ng-click="toInbox()">Inbox</div>
     <div class="outboxButton" ng-controller="OutboxController" ng-click="toOutbox()">Outbox</div>

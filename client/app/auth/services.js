@@ -38,9 +38,16 @@ angular.module('gmail-angular.authServices', [])
     })
   };
 
+  var signout = function() {
+    angular.copy([], resolved);
+    $window.localStorage.removeItem('username');
+    resolved.push(false);
+  };
+
   return {
     resolved: resolved,
     signup: signup,
-    signin: signin
+    signin: signin,
+    signout: signout
   };
 })

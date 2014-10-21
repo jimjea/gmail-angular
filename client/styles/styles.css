@@ -17,7 +17,7 @@ label{
   top: 14%;
 }
 
-.inboxButton, .outboxButton, .trashButton, .composeButton {
+.inboxButton, .outboxButton, .trashButton, .composeButton, .signoutButton{
   position: relative;
   text-align: center;
   padding-top: 8px;
@@ -29,11 +29,14 @@ label{
 
 .composeButton {
   border: 1px solid black;
-
 }
 
-.inboxButton:visited {
-  font-weight: bold;
+.signoutButton {
+  position: fixed;
+  left: 85%;
+  top: 2%;
+  border: 1px solid black;
+
 }
 
 a {

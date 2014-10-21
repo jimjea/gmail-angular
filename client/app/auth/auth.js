@@ -27,5 +27,9 @@ angular.module('gmail-angular.auth', ['ui.router'])
     Auth.signin($scope.userinfo).success(function(data) {
       $state.go('inbox');
     });
-  }
+  };
+  $scope.signout = function() {
+    Auth.signout();
+    $state.go('signin');
+  };
 })
