@@ -1,4 +1,4 @@
 gmail-angular
 =============
 
-Building gmail in angular!
+Building gmail in angular
